@@ -1,2 +1,91 @@
 Name: Tags
 Type: FolderType
+Children:
+- Name: PLC
+  Type: TagStructure
+  DataType: Structure
+  Value: 
+   {
+    "Type": 22,
+    "Body": {
+     "TypeId": {
+      "IdType": 0,
+      "Id": 0,
+      "Namespace": -1
+     },
+     "Body":    {}
+    }
+   }
+  Children:
+  - Name: ToCSV
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: Esito
+      Type: S7TiaProfinetTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.Esito"
+    - Name: Progressivo
+      Type: S7TiaProfinetTag
+      DataType: Int32
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.Progressivo"
+    - Name: AltezzaTaglio
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.AltezzaTaglio"
+    - Name: ProfonditaTaglio
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.ProfonditaTaglio"
+    - Name: RimanenzaTaglio
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.RimanenzaTaglio"
+    - Name: LarghezzaTot
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.LarghezzaTot"
+    - Name: AngoloTaglio
+      Type: S7TiaProfinetTag
+      DataType: Float
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.AngoloTaglio"
