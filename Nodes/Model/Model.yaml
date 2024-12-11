@@ -1,0 +1,109 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: Csv
+  Type: BaseObjectType
+  Children:
+  - Name: Esito
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Progressivo
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: AltezzaTaglio
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: ProfonditaTaglio
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: RimanenzaTaglio
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: LarghezzaTot
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: AngoloTaglio
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: ProgressivoChanged
+    Type: VariableChangedEventDispatcher
+    Children:
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../Progressivo"
+    - Name: VariableValueChangedEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../NetLogic/ExportCsv@NodeId"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Export"
+      - Name: EventArguments
+        Type: VariableValueChangedEvent
+        Children:
+        - Name: VariableNodeId
+          Type: BaseVariableType
+          DataType: NodeId
+        - Name: NewValue
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: OldValue
+          Type: BaseVariableType
+          DataType: BaseDataType
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+- Name: PathCsv
+  Id: g=01e2aed715234a640684fc9d4f0154d5
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "C:\\"
