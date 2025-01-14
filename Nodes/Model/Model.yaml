@@ -6,7 +6,7 @@ Children:
   Children:
   - Name: Esito
     Type: BaseDataVariableType
-    DataType: Int32
+    DataType: Int16
     Children:
     - Name: DynamicLink
       Type: DynamicLink

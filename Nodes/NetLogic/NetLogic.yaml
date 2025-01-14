@@ -112,7 +112,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/AngoloTaglio"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/AngoloTaglio"
       Children:
       - Name: Mode
         Type: BaseVariableType
