@@ -11,7 +11,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/Esito"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/Esito@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -24,7 +24,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/Progressivo"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/Progressivo@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -37,7 +37,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/AltezzaTaglio"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/AltezzaTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -50,7 +50,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/ProfonditaTaglio"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/ProfonditaTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -63,7 +63,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/RimanenzaTaglio"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/RimanenzaTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -76,7 +76,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/LarghezzaTot"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/LarghezzaTot@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -89,7 +89,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/AngoloTaglio"
+      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/AngoloTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType

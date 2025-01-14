@@ -34,7 +34,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/Esito"
+      Value: "../../../Model/Csv/Esito@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -47,7 +47,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/Progressivo"
+      Value: "../../../Model/Csv/Progressivo@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -60,7 +60,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/AltezzaTaglio"
+      Value: "../../../Model/Csv/AltezzaTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -73,7 +73,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/ProfonditaTaglio"
+      Value: "../../../Model/Csv/ProfonditaTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -86,7 +86,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/RimanenzaTaglio"
+      Value: "../../../Model/Csv/RimanenzaTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -99,7 +99,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../Model/Csv/LarghezzaTot"
+      Value: "../../../Model/Csv/LarghezzaTot@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
@@ -112,7 +112,7 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/Tags/PLC/ToCSV/AngoloTaglio"
+      Value: "../../../Model/Csv/AngoloTaglio@Value"
       Children:
       - Name: Mode
         Type: BaseVariableType
