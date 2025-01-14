@@ -51,7 +51,7 @@ public class ExportCsv : BaseNetLogic
             string var5 = rimanenzaTaglioVariable?.Value;
             string var6 = larghezzaTotVariable?.Value;
             string var7 = angoloTaglioVariable?.Value;
-            Log.Info("Valor angolo" + angoloTaglioVariable.Value);
+           // Log.Info("Valor angolo" + angoloTaglioVariable.Value);
 
             // Encabezados (esto dependerá de las variables que quieras escribir)
             string[] header = new string[] { "Esito"," Progressivo","Altezza Taglio","Profondita Taglio", "Rimanenza Taglio", "Larghezza Tot", "Angolo Taglio" };
