@@ -118,3 +118,5 @@ Children:
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
+- Name: ReadTxT
+  Type: NetLogic
