@@ -112,6 +112,31 @@ Children:
     Children:
     - Name: Default
       Type: SwitchStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: ActiveHandleColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: ActiveHandleBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: HandleColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: HandleBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: ActiveTextColor
+        Type: BaseDataVariableType
+        DataType: Color
   - Name: GaugeStyles
     Type: BaseObjectType
     Children:

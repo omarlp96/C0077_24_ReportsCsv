@@ -177,5 +177,35 @@ public class ExportCsv : BaseNetLogic
 
         #endregion
     }
+
+    [ExportMethod]
+    public void DeleteFile()
+    {
+        // Prendi la Path
+        string filePath = GetCSVFilePath();
+
+        //Verifichiamo se essiste
+        if (File.Exists(filePath)) 
+        {
+            try
+            {
+                // Prova cancellare il file
+                File.Delete(filePath);
+            }
+            catch (IOException ioEx)
+            {
+                Log.Error("Errore in cancellare il file (Bloccato o in uso): " + ioEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error in cancellare il file: " + ex.Message);
+            }
+        }
+        else
+        {
+            Log.Error("Il file non essiste: " + filePath);
+        }
+    }
+
     #endregion
 }

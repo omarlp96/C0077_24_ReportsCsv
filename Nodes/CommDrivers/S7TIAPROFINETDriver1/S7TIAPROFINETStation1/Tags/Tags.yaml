@@ -89,3 +89,11 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "PLC.Blocks.ToCSV.AngoloTaglio"
+    - Name: FileTrigger
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.FileTrigger"
