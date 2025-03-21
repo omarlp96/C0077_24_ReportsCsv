@@ -20,14 +20,16 @@ using FTOptix.Recipe;
 public class ReadTxT : BaseNetLogic
 {
     private IUAVariable filePath;
-    private IUAVariable ReadOK;
+   // private IUAVariable ReadOK;
     private IUAVariable triggerRead;
+    private IUAVariable recipeNum;
     public override void Start()
     {
         // Insert code to be executed when the user-defined logic is started
         filePath = Project.Current.GetVariable("Model/PathTxt");
-        ReadOK = Project.Current.GetVariable("Model/ReadOk");
+       // ReadOK = Project.Current.GetVariable("Model/ReadOk");
         triggerRead = Project.Current.GetVariable("Model/ReadLine");
+        recipeNum = Project.Current.GetVariable("Model/RecipeNum");
     }
     [ExportMethod]
     public void ReadLine()
@@ -44,11 +46,20 @@ public class ReadTxT : BaseNetLogic
                 // Obtener la última línea
                 string lastline = lines[lines.Length - 1];
                 LogicObject.GetVariable("lastline").Value = lastline;
+                //  recipeNum.Value = lastline.ToString();
+                if (int.TryParse(lastline, out int parsedValue))
+                {
+                    recipeNum.Value = parsedValue;
+                }
+                else
+                {
+                    Log.Error($"No se pudo convertir '{lastline}' a número.");
+                }
                 Log.Info("Leyendo");
                 Thread.Sleep(200);
-                ReadOK.Value = true;
+                //ReadOK.Value = true;
                 Thread.Sleep(200);
-                ReadOK.Value = false;
+               // ReadOK.Value = false;
                 triggerRead.Value = false;
 
             }

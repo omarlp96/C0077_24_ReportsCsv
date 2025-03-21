@@ -298,7 +298,6 @@ Children:
       DataType: DynamicLinkMode
       Value: 2
 - Name: RecipeNum
-  Id: g=8557229d3215de7b0981df95e352eb8f
   Type: BaseDataVariableType
   DataType: Int32
   Children:
@@ -328,106 +327,6 @@ Children:
     Type: BaseVariableType
     DataType: NodePath
     Value: "../ReadOk"
-  - Name: VariableTransitionEventHandler1
-    Type: EventHandler
-    Children:
-    - Name: ListenEventType
-      Type: PropertyType
-      DataType: NodeId
-      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
-    - Name: MethodsToCall
-      Type: BaseObjectType
-      Children:
-      - Name: MethodContainer1
-        Type: BaseObjectType
-        Children:
-        - Name: ns=2;ObjectPointer
-          Type: NodePointer
-          DataType: NodeId
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/ObjectTypes/BaseObjectType"
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../../../../Commands/VariableCommands@NodeId"
-            Children:
-            - Name: Mode
-              Type: BaseVariableType
-              DataType: DynamicLinkMode
-              Value: 2
-        - Name: ns=2;Method
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Set"
-        - Name: InputArguments
-          Type: BaseObjectType
-          Children:
-          - Name: VariableToModify
-            Type: BaseDataVariableType
-            DataType: VariablePointer
-            Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
-            Value: "/Objects/C0077_24_ReportsCsv/Model/RecipeNum"
-          - Name: Value
-            Type: BaseDataVariableType
-            DataType: Int32
-            Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
-            Children:
-            - Name: String_Int1
-              Type: String_Int
-              Children:
-              - Name: Source
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../../../../../../../NetLogic/ReadTxT/lastline"
-          - Name: ArrayIndex
-            Type: BaseDataVariableType
-            DataType: UInt32
-            Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
-            ValueRank: ScalarOrOneDimension
-    - Name: EventArguments
-      Type: VariableTransitionEvent
-      Children:
-      - Name: VariableNodeId
-        Type: BaseVariableType
-        DataType: NodeId
-      - Name: NewValue
-        Type: BaseVariableType
-        DataType: BaseDataType
-      - Name: OldValue
-        Type: BaseVariableType
-        DataType: BaseDataType
-      - Name: EventId
-        Type: PropertyType
-        DataType: ByteString
-      - Name: EventType
-        Type: PropertyType
-        DataType: NodeId
-      - Name: SourceNode
-        Type: PropertyType
-        DataType: NodeId
-      - Name: SourceName
-        Type: PropertyType
-        DataType: String
-      - Name: Time
-        Type: PropertyType
-        DataType: UtcTime
-      - Name: ReceiveTime
-        Type: PropertyType
-        DataType: UtcTime
-      - Name: Message
-        Type: PropertyType
-        DataType: LocalizedText
-      - Name: Severity
-        Type: PropertyType
-        DataType: UInt16
 - Name: ReadLineTransitioned
   Type: VariableTransitionEventDispatcher
   Children:
