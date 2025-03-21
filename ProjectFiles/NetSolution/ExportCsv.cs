@@ -5,6 +5,7 @@ using System.Text;
 using System;
 using UAManagedCore;
 using System.Runtime.InteropServices;
+using FTOptix.OPCUAServer;
 
 public class ExportCsv : BaseNetLogic
 {

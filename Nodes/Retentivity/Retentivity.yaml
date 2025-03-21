@@ -73,6 +73,18 @@ Children:
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
+    - Name: Node2
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/C0077_24_ReportsCsv/Model/PathTxt"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+      - Name: NodeClass
+        Type: PropertyType
+        DataType: NodePointerNodeClass
+        Value: 2
   - Name: WriteDelay
     Type: BaseDataVariableType
     DataType: Duration

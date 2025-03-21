@@ -97,3 +97,19 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "PLC.Blocks.ToCSV.FileTrigger"
+    - Name: ReadTrigger
+      Type: S7TiaProfinetTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.ReadTrigger"
+    - Name: RecipeNum
+      Type: S7TiaProfinetTag
+      DataType: Int32
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "PLC.Blocks.ToCSV.RecipeNum"

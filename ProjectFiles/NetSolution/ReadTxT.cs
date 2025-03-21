@@ -11,17 +11,63 @@ using FTOptix.Retentivity;
 using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
+using System.IO;
+using System.Threading;
+using FTOptix.OPCUAServer;
+using FTOptix.Recipe;
 #endregion
 
 public class ReadTxT : BaseNetLogic
 {
+    private IUAVariable filePath;
+    private IUAVariable ReadOK;
+    private IUAVariable triggerRead;
     public override void Start()
     {
         // Insert code to be executed when the user-defined logic is started
+        filePath = Project.Current.GetVariable("Model/PathTxt");
+        ReadOK = Project.Current.GetVariable("Model/ReadOk");
+        triggerRead = Project.Current.GetVariable("Model/ReadLine");
     }
-
-    public override void Stop()
+    [ExportMethod]
+    public void ReadLine()
     {
-        // Insert code to be executed when the user-defined logic is stopped
+        string path = filePath.Value;
+        try
+        {
+            // Read all lines from file into an array of strings
+            string[] lines = File.ReadAllLines(path);
+
+            // Check if the file is not empty
+            if (lines.Length > 0)
+            {
+                // Obtener la última línea
+                string lastline = lines[lines.Length - 1];
+                LogicObject.GetVariable("lastline").Value = lastline;
+                Log.Info("Leyendo");
+                Thread.Sleep(200);
+                ReadOK.Value = true;
+                Thread.Sleep(200);
+                ReadOK.Value = false;
+                triggerRead.Value = false;
+
+            }
+            else
+            {
+                Log.Error("The file is empty");
+            }
+        }
+        catch (FileNotFoundException ex)
+        {
+            Log.Error("File not found", ex.Message);
+        }
+        catch (IOException ex)
+        {
+            Log.Error("Problem reading the file", ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("aqui", ex.Message);
+        }
     }
 }

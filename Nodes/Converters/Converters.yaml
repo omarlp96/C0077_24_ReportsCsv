@@ -1,2 +1,40 @@
 Name: Converters
 Type: ConvertersCategoryFolder
+Children:
+- Name: String_Int
+  Id: g=b2eb3b042ead7765af0b51e933830269
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: ns=2;Pairs
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: None
+        Value: "1"
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: None
+        Value: 1
+    - Name: Pair1
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: None
+        Value: "2"
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: None
+        Value: 2

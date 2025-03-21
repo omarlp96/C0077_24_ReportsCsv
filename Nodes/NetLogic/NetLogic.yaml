@@ -122,3 +122,9 @@ Children:
     Name: DeleteFile
 - Name: ReadTxT
   Type: NetLogic
+  Children:
+  - Name: lastline
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Method
+    Name: ReadLine
